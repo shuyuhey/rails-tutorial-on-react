@@ -24,5 +24,12 @@ module RailsReact
     config.active_record.raise_in_transactional_callbacks = true
 
     config.browserify_rails.commandline_options = '-t babelify'
+
+    config.generators do |g|
+      g.stylesheets false
+      g.javascripts false
+      g.helper false
+      g.test false
+    end
   end
 end
